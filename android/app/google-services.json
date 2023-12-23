@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "779907141914",
+    "project_id": "e-project-firebase",
+    "storage_bucket": "e-project-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:779907141914:android:b8b8a8022f139889049ca3",
+        "android_client_info": {
+          "package_name": "com.example.fashion_ecommerce_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPO1xwy3_bmCTTgmWGdJZ5Jv_Ab8hJAAs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
