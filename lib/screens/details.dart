@@ -61,7 +61,7 @@ class _DetailsState extends State<Details> {
             ///Top Image
             SizedBox(
               width: size.width,
-              height: size.height * 0.5,
+              height: size.height * 0.4,
               child: Stack(
                 children: [
                   Hero(
@@ -70,7 +70,7 @@ class _DetailsState extends State<Details> {
                         : current.id,
                     child: Container(
                       width: size.width,
-                      height: size.height * 0.5,
+                      height: size.height * 0.3,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage(current.imageUrl),
@@ -82,7 +82,7 @@ class _DetailsState extends State<Details> {
                     bottom: 0,
                     child: Container(
                       width: size.width,
-                      height: size.height * 0.12,
+                      height: size.height * 0.6,
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                             begin: Alignment.bottomCenter,
@@ -110,7 +110,7 @@ class _DetailsState extends State<Details> {
                         children: [
                           Text(
                             current.name,
-                            style: textTheme.headline3?.copyWith(fontSize: 22),
+                            style: textTheme.headline3?.copyWith(fontSize: 18),
                           ),
                           ReuseableText(
                             price: current.price,

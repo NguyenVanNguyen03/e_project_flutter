@@ -1,11 +1,10 @@
-
 import 'package:flutter/material.dart';
- 
 
 class ReuseableButton extends StatelessWidget {
   const ReuseableButton({
     Key? key,
-    required this.text, required this.onTap,
+    required this.text,
+    required this.onTap,
   }) : super(key: key);
 
   final String text;
@@ -13,15 +12,15 @@ class ReuseableButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     var size = MediaQuery.of(context).size;
+    var size = MediaQuery.of(context).size;
     return Center(
       child: MaterialButton(
         onPressed: onTap,
-        minWidth: size.width * 0.9,
-        height: size.height * 0.07,
+        minWidth: size.width * 0.8,
+        height: size.height * 0.05,
         color: const Color(0xff141414),
         child: Text(
-         text,
+          text,
           style: const TextStyle(
             color: Colors.white,
             fontSize: 16,

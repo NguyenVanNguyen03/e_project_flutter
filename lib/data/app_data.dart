@@ -3,15 +3,15 @@ import '../model/categories_model.dart';
 
 List<CategoriesModel> categories = [
   CategoriesModel(
-    imageUrl: "assets/images/kids.jpg",
+    imageUrl: "assets/images/anh10.jpg",
     title: "Kids",
   ),
   CategoriesModel(
-    imageUrl: "assets/images/mens.jpg",
+    imageUrl: "assets/images/anh14.jpg",
     title: "Men",
   ),
   CategoriesModel(
-    imageUrl: "assets/images/women.jpg",
+    imageUrl: "assets/images/anh13.jpg",
     title: "Women",
   ),
   CategoriesModel(
@@ -34,8 +34,8 @@ List<CategoriesModel> categories = [
 
 List<BaseModel> mainList = [
   BaseModel(
-    imageUrl: "assets/images/mens.jpg",
-    name: "Casual Jeans Pant",
+    imageUrl: "assets/images/anh12.jpg",
+    name: "Monochrome",
     price: 155.99,
     review: 3.6,
     star: 4.8,
@@ -43,8 +43,8 @@ List<BaseModel> mainList = [
     value: 1,
   ),
   BaseModel(
-    imageUrl: "assets/images/blazer.jpg",
-    name: "blue Coat",
+    imageUrl: "assets/images/anh11.jpg",
+    name: "Dark-wear",
     price: 143.99,
     review: 5.6,
     star: 5.0,
@@ -52,7 +52,7 @@ List<BaseModel> mainList = [
     value: 1,
   ),
   BaseModel(
-    imageUrl: "assets/images/jacjket.jpg",
+    imageUrl: "assets/images/anh10.jpg",
     name: "Deep Green Jacket",
     price: 212.99,
     review: 2.6,
@@ -61,8 +61,8 @@ List<BaseModel> mainList = [
     value: 1,
   ),
   BaseModel(
-    imageUrl: "assets/images/shirt.jpg",
-    name: "Orange Shirt",
+    imageUrl: "assets/images/anh9.jpg",
+    name: "Gothic",
     price: 432.99,
     review: 1.4,
     star: 2.4,
@@ -70,8 +70,8 @@ List<BaseModel> mainList = [
     value: 1,
   ),
   BaseModel(
-    imageUrl: "assets/images/sw.jpg",
-    name: "Grey Pullover",
+    imageUrl: "assets/images/anh8.jpg",
+    name: "Harajuku",
     price: 112.99,
     review: 4.2,
     star: 1.8,
@@ -79,7 +79,7 @@ List<BaseModel> mainList = [
     value: 1,
   ),
   BaseModel(
-    imageUrl: "assets/images/women.jpg",
+    imageUrl: "assets/images/anh7.jpg",
     name: "Pullover Sleeveless",
     price: 320.99,
     review: 2.1,
@@ -88,8 +88,8 @@ List<BaseModel> mainList = [
     value: 1,
   ),
   BaseModel(
-    imageUrl: "assets/images/womens.jpg",
-    name: "Black Coat",
+    imageUrl: "assets/images/anh6.jpg",
+    name: "Streetwear",
     price: 113.99,
     review: 3.1,
     star: 4.8,
@@ -97,8 +97,8 @@ List<BaseModel> mainList = [
     value: 1,
   ),
   BaseModel(
-    imageUrl: "assets/images/t-shirt.jpg",
-    name: "White Shirt",
+    imageUrl: "assets/images/anh5.jpg",
+    name: "Bohemian",
     price: 178.99,
     review: 2.6,
     star: 4.8,
@@ -106,7 +106,6 @@ List<BaseModel> mainList = [
     value: 1,
   ),
 ];
-
 
 List<BaseModel> itemsOnCart = [];
 List<BaseModel> itemsOnSearch = [];

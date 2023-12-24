@@ -138,7 +138,7 @@ class _SearchState extends State<Search> {
                                       right: size.width * 0.01,
                                       child: Container(
                                         width: size.width * 0.5,
-                                        height: size.height * 0.28,
+                                        height: size.height * 0.43,
                                         margin: const EdgeInsets.all(10),
                                         decoration: BoxDecoration(
                                           borderRadius:
@@ -150,7 +150,7 @@ class _SearchState extends State<Search> {
                                           boxShadow: const [
                                             BoxShadow(
                                               offset: Offset(0, 4),
-                                              blurRadius: 4,
+                                              blurRadius: 5,
                                               color:
                                                   Color.fromARGB(61, 0, 0, 0),
                                             )
@@ -162,7 +162,10 @@ class _SearchState extends State<Search> {
                                       bottom: size.height * 0.04,
                                       child: Text(
                                         current.name,
-                                        style: textTheme.headline2,
+                                        style: textTheme.headline2?.copyWith(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                       ),
                                     ),
                                     Positioned(
@@ -173,7 +176,7 @@ class _SearchState extends State<Search> {
                                               style:
                                                   textTheme.subtitle2?.copyWith(
                                                 color: primaryColor,
-                                                fontSize: 20,
+                                                fontSize: 18,
                                                 fontWeight: FontWeight.bold,
                                               ),
                                               children: [
@@ -182,6 +185,7 @@ class _SearchState extends State<Search> {
                                               style:
                                                   textTheme.subtitle2?.copyWith(
                                                 fontWeight: FontWeight.bold,
+                                                fontSize: 20,
                                               ),
                                             )
                                           ])),

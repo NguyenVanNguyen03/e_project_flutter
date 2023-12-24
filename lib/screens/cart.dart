@@ -233,13 +233,13 @@ class _CartState extends State<Cart> {
                                           top: size.height * 0.058,
                                         ),
                                         width: size.width * 0.4,
-                                        height: size.height * 0.04,
+                                        height: size.height * 0.035,
                                         child: Row(
                                           children: [
                                             Container(
                                               margin: const EdgeInsets.all(4.0),
                                               width: size.width * 0.065,
-                                              height: size.height * 0.045,
+                                              height: size.height * 0.040,
                                               decoration: BoxDecoration(
                                                 borderRadius:
                                                     BorderRadius.circular(10),
@@ -325,7 +325,7 @@ class _CartState extends State<Cart> {
               bottom: 0,
               child: Container(
                 width: size.width,
-                height: size.height * 0.36,
+                height: size.height * 0.38,
                 color: Colors.white,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(

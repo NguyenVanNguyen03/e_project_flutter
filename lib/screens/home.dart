@@ -97,7 +97,7 @@ class _HomeState extends State<Home> {
                 child: Container(
                   margin: const EdgeInsets.only(top: 7),
                   width: size.width,
-                  height: size.height * 0.14,
+                  height: size.height * 0.15,
                   child: ListView.builder(
                       physics: const BouncingScrollPhysics(),
                       scrollDirection: Axis.horizontal,
@@ -117,7 +117,7 @@ class _HomeState extends State<Home> {
                               ),
                               Text(
                                 current.title,
-                                style: TextStyle(fontSize: 18),
+                                style: TextStyle(fontSize: 16),
                               ),
                             ],
                           ),
@@ -132,7 +132,7 @@ class _HomeState extends State<Home> {
                 child: Container(
                   margin: const EdgeInsets.only(top: 10),
                   width: size.width,
-                  height: size.height * 0.49,
+                  height: size.height * 0.50,
                   child: PageView.builder(
                     controller: _pageController,
                     itemCount: mainList.length,

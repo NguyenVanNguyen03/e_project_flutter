@@ -9,6 +9,7 @@ import '../screens/search.dart';
 import '../utils/constants.dart';
 import 'screens/login/sign_in_creen.dart';
 import 'screens/onbording/onbording.dart';
+import 'screens/profile.dart';
 
 class MainWrapper extends StatefulWidget {
   const MainWrapper({super.key});
@@ -33,7 +34,7 @@ class _MainWrapperState extends State<MainWrapper> {
     Home(),
     Home(),
     SignInScreen(),
-    Onbording(),
+    Profile(),
   ];
 
   @override
