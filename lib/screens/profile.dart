@@ -33,19 +33,17 @@ class Profile extends StatelessWidget {
             children: const [
               CircleAvatar(
                 radius: 50,
-                backgroundImage: NetworkImage(
-                  "https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80",
-                ),
+                backgroundImage: AssetImage("assets/images/avatar.png"),
               ),
               SizedBox(height: 10),
               Text(
-                "Rachael Wagner",
+                "Yasuo",
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Text("Junior Product Designer")
+              Text("Fashion Designer")
             ],
           ),
           const SizedBox(height: 25),

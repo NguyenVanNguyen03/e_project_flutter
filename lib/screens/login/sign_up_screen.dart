@@ -6,6 +6,7 @@ import 'package:fashion_ecommerce_app/screens/login/toast.dart';
 import 'package:fashion_ecommerce_app/screens/onbording/onbording.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import '../../utils/constants.dart';
 import './sign_up_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -61,7 +62,7 @@ class _SignUpScreen extends State<SignUpScreen> {
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (_) => Onbording(),
+                            builder: (_) => SignInScreen(),
                           ),
                         );
                       },
@@ -81,11 +82,11 @@ class _SignUpScreen extends State<SignUpScreen> {
                   Padding(
                       padding: EdgeInsets.only(left: 30, right: 30, top: 30),
                       child: Text(
-                        "Let's Learn More About Plants",
+                        "Create an account to admire the beautiful clothes",
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
-                            color: Colors.greenAccent),
+                            color: primaryColor),
                       )),
                   Padding(
                     padding: EdgeInsets.only(left: 30, right: 30, top: 30),
@@ -172,7 +173,7 @@ class _SignUpScreen extends State<SignUpScreen> {
                                   }
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    backgroundColor: kPrimaryColor),
+                                    backgroundColor: primaryColor),
                                 child: SizedBox(
                                   width: 450,
                                   height: 50,
@@ -206,7 +207,7 @@ class _SignUpScreen extends State<SignUpScreen> {
                                     style: TextStyle(
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.greenAccent),
+                                        color: primaryColor),
                                   ),
                                 )
                               ],

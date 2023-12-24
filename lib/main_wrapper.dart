@@ -8,7 +8,9 @@ import '../screens/home.dart';
 import '../screens/search.dart';
 import '../utils/constants.dart';
 import 'screens/login/sign_in_creen.dart';
+import 'screens/myShop.dart';
 import 'screens/onbording/onbording.dart';
+import 'screens/other_shop.dart';
 import 'screens/profile.dart';
 
 class MainWrapper extends StatefulWidget {
@@ -31,9 +33,9 @@ class _MainWrapperState extends State<MainWrapper> {
 
   final List<Widget> tabs = [
     Home(),
-    Home(),
-    Home(),
-    SignInScreen(),
+    OtherShop(),
+    Search(),
+    MyShop(),
     Profile(),
   ];
 
@@ -120,10 +122,10 @@ class _MainWrapperState extends State<MainWrapper> {
         selectedIndex: _currentIndex,
         items: [
           BottomBarItem(iconData: Icons.home),
+          BottomBarItem(iconData: Icons.add_business_sharp),
           BottomBarItem(iconData: Icons.search),
-          BottomBarItem(iconData: Icons.explore),
-          BottomBarItem(iconData: Icons.settings),
-          BottomBarItem(iconData: Icons.mail),
+          BottomBarItem(iconData: Icons.business_center),
+          BottomBarItem(iconData: Icons.person),
         ],
         onSelect: (index) {
           setState(() {

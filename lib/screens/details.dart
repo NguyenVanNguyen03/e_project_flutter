@@ -305,7 +305,7 @@ class _DetailsState extends State<Details> {
         },
         icon: const Icon(
           Icons.arrow_back_rounded,
-          color: Colors.white,
+          color: primaryColor,
         ),
       ),
     );

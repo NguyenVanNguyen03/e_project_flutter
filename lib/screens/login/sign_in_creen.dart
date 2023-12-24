@@ -4,6 +4,7 @@ import 'package:fashion_ecommerce_app/screens/login/constants.dart';
 import 'package:fashion_ecommerce_app/screens/login/toast.dart';
 import 'package:fashion_ecommerce_app/screens/onbording/onbording.dart';
 import 'package:flutter/material.dart';
+import '../../utils/constants.dart';
 import './sign_up_screen.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -78,18 +79,18 @@ class _SignInScreen extends State<SignInScreen> {
                   Padding(
                       padding: EdgeInsets.only(left: 30, right: 30, top: 30),
                       child: Text(
-                        "Hello",
+                        "Sign In",
                         style: TextStyle(
                             fontSize: 30, fontWeight: FontWeight.bold),
                       )),
                   Padding(
                       padding: EdgeInsets.only(left: 30, right: 30, top: 30),
                       child: Text(
-                        "Let's Learn More About Plants",
+                        "Log in to choose your favorite outfits",
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
-                            color: Colors.greenAccent),
+                            color: primaryColor),
                       )),
                   Padding(
                     padding: EdgeInsets.only(left: 30, right: 30, top: 30),
@@ -191,7 +192,7 @@ class _SignInScreen extends State<SignInScreen> {
                                   }
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    backgroundColor: kPrimaryColor),
+                                    backgroundColor: primaryColor),
                                 child: SizedBox(
                                   width: 450,
                                   height: 50,
@@ -217,36 +218,49 @@ class _SignInScreen extends State<SignInScreen> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                IconButton(
-                                  icon: const Icon(Icons.golf_course),
-                                  onPressed: () {
+                                GestureDetector(
+                                  onTap: () {
                                     _signInWithGoogle();
                                   },
+                                  child: Row(
+                                    children: [
+                                      Image(
+                                        image: AssetImage(
+                                            'assets/images/google.png'),
+                                        width: 40,
+                                        height: 40,
+                                        fit: BoxFit.cover,
+                                      ),
+                                      SizedBox(
+                                        width: 30,
+                                      ),
+                                      Image.asset(
+                                        'assets/images/facebook.png',
+                                        width: 40,
+                                        height: 40,
+                                        fit: BoxFit.cover,
+                                      ),
+                                      SizedBox(
+                                        width: 30,
+                                      ),
+                                      Image.asset(
+                                        'assets/images/kakao-talk.png',
+                                        width: 40,
+                                        height: 40,
+                                        fit: BoxFit.cover,
+                                      ),
+                                      SizedBox(
+                                        width: 30,
+                                      ),
+                                      Image.asset(
+                                        'assets/images/line.png',
+                                        width: 40,
+                                        height: 40,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                                // Image.asset(
-                                //   'assets/images/logo_fb.png',
-                                //   width: 40,
-                                //   height: 40,
-                                //   fit: BoxFit.cover,
-                                // ),
-                                //     SizedBox(
-                                //       width: 30,
-                                //     ),
-                                //     Image.asset(
-                                //       'assets/images/logo_talk.png',
-                                //       width: 40,
-                                //       height: 40,
-                                //       fit: BoxFit.cover,
-                                //     ),
-                                //     SizedBox(
-                                //       width: 30,
-                                //     ),
-                                //     Image.asset(
-                                //       'assets/images/logo_line.png',
-                                //       width: 40,
-                                //       height: 40,
-                                //       fit: BoxFit.cover,
-                                //     ),
                               ],
                             ),
                             SizedBox(
@@ -270,7 +284,7 @@ class _SignInScreen extends State<SignInScreen> {
                                     style: TextStyle(
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.greenAccent),
+                                        color: primaryColor),
                                   ),
                                 )
                               ],
@@ -309,7 +323,7 @@ class _SignInScreen extends State<SignInScreen> {
         ),
       );
     } else {
-      showToast(message: "some error occured");
+      showToast(message: "Gmail or password is incorrect");
     }
   }
 

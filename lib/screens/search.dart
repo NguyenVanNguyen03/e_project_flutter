@@ -84,7 +84,7 @@ class _SearchState extends State<Search> {
                             fontWeight: FontWeight.w400,
                             color: Colors.grey[600],
                           ),
-                          hintText: "e,g.Casual Jeans",
+                          hintText: "Find something you like",
                           border: OutlineInputBorder(
                             borderSide: BorderSide.none,
                             borderRadius: BorderRadius.circular(13),

@@ -57,11 +57,11 @@ class _HomeState extends State<Home> {
                     children: [
                       RichText(
                         text: TextSpan(
-                          text: "Find your",
+                          text: "Choose The Templates You",
                           style: textTheme.headline1,
                           children: [
                             TextSpan(
-                              text: " Style",
+                              text: "Love",
                               style: textTheme.headline1?.copyWith(
                                 color: Colors.orange,
                                 fontSize: 45,
@@ -73,7 +73,7 @@ class _HomeState extends State<Home> {
                       ),
                       RichText(
                         text: const TextSpan(
-                          text: "Be more beautiful with our ",
+                          text: "Here we have what you want",
                           style: TextStyle(
                             color: Color.fromARGB(186, 0, 0, 0),
                             fontSize: 16,
@@ -81,7 +81,7 @@ class _HomeState extends State<Home> {
                           ),
                           children: [
                             TextSpan(
-                              text: "suggestions ",
+                              text: " ",
                             ),
                           ],
                         ),
