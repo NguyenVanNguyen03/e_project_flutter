@@ -1,6 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:video_player/video_player.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../main_wrapper.dart';
 
@@ -150,33 +152,36 @@ class _MyShopState extends State<MyShop> {
                       const SizedBox(
                         height: 10,
                       ),
-                      Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          Container(
-                            width: double.infinity,
-                            height: 250,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10.0),
-                              image: const DecorationImage(
-                                image: AssetImage('assets/images/anh5.jpg'),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                          Container(
-                              width: 50,
-                              height: 50,
-                              decoration: BoxDecoration(
-                                  color:
-                                      const Color.fromRGBO(255, 255, 255, 0.4),
-                                  borderRadius: BorderRadius.circular(9999.0)),
-                              child: const Icon(
-                                Icons.play_arrow_rounded,
-                                size: 36,
-                                color: Color(0xFF00CEA5),
-                              ))
-                        ],
+                      // Stack(
+                      //   alignment: Alignment.center,
+                      //   children: [
+                      //     Container(
+                      //       width: double.infinity,
+                      //       height: 250,
+                      //       decoration: BoxDecoration(
+                      //         borderRadius: BorderRadius.circular(10.0),
+                      //         image: const DecorationImage(
+                      //           image: AssetImage('assets/images/anh5.jpg'),
+                      //           fit: BoxFit.cover,
+                      //         ),
+                      //       ),
+                      //     ),
+                      //     Container(
+                      //         width: 50,
+                      //         height: 50,
+                      //         decoration: BoxDecoration(
+                      //             color:
+                      //                 const Color.fromRGBO(255, 255, 255, 0.4),
+                      //             borderRadius: BorderRadius.circular(9999.0)),
+                      //         child: const Icon(
+                      //           Icons.play_arrow_rounded,
+                      //           size: 36,
+                      //           color: Color(0xFF00CEA5),
+                      //         ))
+                      //   ],
+                      // ),
+                      Center(
+                        child: YoutubePlayerExample(),
                       ),
                       const SizedBox(
                         height: 16,
@@ -347,6 +352,42 @@ class TagLanguage extends StatelessWidget {
         style: const TextStyle(fontSize: 12, color: Color(0xFF555555)),
       ),
     );
+  }
+}
+
+class YoutubePlayerExample extends StatefulWidget {
+  const YoutubePlayerExample({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  _YoutubePlayerExampleState createState() => _YoutubePlayerExampleState();
+}
+
+class _YoutubePlayerExampleState extends State<YoutubePlayerExample> {
+  final videoURL = "https://www.youtube.com/watch?v=UizkMipO54w";
+  late YoutubePlayerController _controller;
+
+  @override
+  void initState() {
+    final videoID = YoutubePlayer.convertUrlToId(videoURL);
+
+    _controller = YoutubePlayerController(
+        initialVideoId: videoID!,
+        flags: const YoutubePlayerFlags(
+          autoPlay: false,
+        ));
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      YoutubePlayer(
+        controller: _controller,
+        showVideoProgressIndicator: true,
+      ),
+    ]);
   }
 }
 
