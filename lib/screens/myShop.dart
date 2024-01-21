@@ -57,9 +57,10 @@ class _MyShopState extends State<MyShop> {
                     ),
                     Container(
                       padding: const EdgeInsets.only(top: 120, left: 16),
-                      child: const Image(
-                        image: AssetImage('assets/images/avatar.png'),
-                        fit: BoxFit.cover,
+                      child: const CircleAvatar(
+                        radius: 50,
+                        backgroundImage:
+                            AssetImage("assets/images/avatar_cauvang.png"),
                       ),
                     ),
                   ],

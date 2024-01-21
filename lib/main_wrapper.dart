@@ -1,17 +1,15 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:bottom_bar_matu/bottom_bar_matu.dart';
+import 'package:bottom_bar_matu/bottom_bar/bottom_bar_bubble.dart';
+import 'package:bottom_bar_matu/bottom_bar_item.dart';
+import 'package:fashion_ecommerce_app/screens/cart.dart';
+import 'package:fashion_ecommerce_app/screens/home.dart';
+import 'package:fashion_ecommerce_app/screens/myShop.dart';
+import 'package:fashion_ecommerce_app/screens/other_shop.dart';
+import 'package:fashion_ecommerce_app/screens/profile.dart';
+import 'package:fashion_ecommerce_app/screens/search.dart';
+import 'package:fashion_ecommerce_app/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
-
-import '../screens/cart.dart';
-import '../screens/home.dart';
-import '../screens/search.dart';
-import '../utils/constants.dart';
-import 'screens/login/sign_in_creen.dart';
-import 'screens/myShop.dart';
-import 'screens/onbording/onbording.dart';
-import 'screens/other_shop.dart';
-import 'screens/profile.dart';
 
 class MainWrapper extends StatefulWidget {
   const MainWrapper({super.key});

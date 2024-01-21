@@ -4,31 +4,31 @@ import '../model/categories_model.dart';
 List<CategoriesModel> categories = [
   CategoriesModel(
     imageUrl: "assets/images/anh10.jpg",
-    title: "Kids",
+    title: "Gu xì",
   ),
   CategoriesModel(
     imageUrl: "assets/images/anh14.jpg",
-    title: "Men",
+    title: "adidau",
   ),
   CategoriesModel(
     imageUrl: "assets/images/anh13.jpg",
-    title: "Women",
+    title: "Eo xì",
   ),
   CategoriesModel(
     imageUrl: "assets/images/shoes.jpg",
-    title: "Shoes",
+    title: "Giầy",
   ),
   CategoriesModel(
     imageUrl: "assets/images/bags.jpg",
-    title: "Bag",
+    title: "Túi Gu xì",
   ),
   CategoriesModel(
     imageUrl: "assets/images/glass.jpg",
-    title: "Glass",
+    title: "Kính",
   ),
   CategoriesModel(
     imageUrl: "assets/images/hat.jpg",
-    title: "Hat",
+    title: "Mũ Rơm",
   ),
 ];
 
@@ -36,7 +36,7 @@ List<BaseModel> mainList = [
   BaseModel(
     imageUrl: "assets/images/anh12.jpg",
     name: "Monochrome",
-    price: 155.99,
+    price: 200,
     review: 3.6,
     star: 4.8,
     id: 1,
@@ -45,7 +45,7 @@ List<BaseModel> mainList = [
   BaseModel(
     imageUrl: "assets/images/anh11.jpg",
     name: "Dark-wear",
-    price: 143.99,
+    price: 100,
     review: 5.6,
     star: 5.0,
     id: 2,
@@ -54,7 +54,7 @@ List<BaseModel> mainList = [
   BaseModel(
     imageUrl: "assets/images/anh10.jpg",
     name: "Deep Green Jacket",
-    price: 212.99,
+    price: 150,
     review: 2.6,
     star: 3.7,
     id: 3,
@@ -63,7 +63,7 @@ List<BaseModel> mainList = [
   BaseModel(
     imageUrl: "assets/images/anh9.jpg",
     name: "Gothic",
-    price: 432.99,
+    price: 400,
     review: 1.4,
     star: 2.4,
     id: 4,
@@ -72,7 +72,7 @@ List<BaseModel> mainList = [
   BaseModel(
     imageUrl: "assets/images/anh8.jpg",
     name: "Harajuku",
-    price: 112.99,
+    price: 140,
     review: 4.2,
     star: 1.8,
     id: 5,
@@ -81,7 +81,7 @@ List<BaseModel> mainList = [
   BaseModel(
     imageUrl: "assets/images/anh7.jpg",
     name: "Pullover Sleeveless",
-    price: 320.99,
+    price: 300,
     review: 2.1,
     star: 3.1,
     id: 6,
@@ -90,7 +90,7 @@ List<BaseModel> mainList = [
   BaseModel(
     imageUrl: "assets/images/anh6.jpg",
     name: "Streetwear",
-    price: 113.99,
+    price: 320,
     review: 3.1,
     star: 4.8,
     id: 7,
@@ -99,7 +99,7 @@ List<BaseModel> mainList = [
   BaseModel(
     imageUrl: "assets/images/anh5.jpg",
     name: "Bohemian",
-    price: 178.99,
+    price: 120,
     review: 2.6,
     star: 4.8,
     id: 8,

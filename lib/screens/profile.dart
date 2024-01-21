@@ -1,4 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:animate_do/animate_do.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -29,22 +30,26 @@ class Profile extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         children: [
           // COLUMN THAT WILL CONTAIN THE PROFILE
-          Column(
-            children: const [
-              CircleAvatar(
-                radius: 50,
-                backgroundImage: AssetImage("assets/images/avatar.png"),
-              ),
-              SizedBox(height: 10),
-              Text(
-                "Yasuo",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
+          FadeInLeft(
+            delay: const Duration(milliseconds: 300),
+            child: Column(
+              children: const [
+                CircleAvatar(
+                  radius: 50,
+                  backgroundImage:
+                      AssetImage("assets/images/avatar_cauvang.png"),
                 ),
-              ),
-              Text("Fashion Designer")
-            ],
+                SizedBox(height: 10),
+                Text(
+                  "Yasuo",
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text("Fashion Designer")
+              ],
+            ),
           ),
           const SizedBox(height: 25),
           Row(
