@@ -178,7 +178,7 @@ class _HomeState extends State<Home> {
                 child: Container(
                   margin: const EdgeInsets.only(top: 10.0),
                   width: size.width,
-                  height: size.height * 0.44,
+                  height: size.height * 0.65,
                   child: GridView.builder(
                       physics: const BouncingScrollPhysics(),
                       itemCount: mainList.length,

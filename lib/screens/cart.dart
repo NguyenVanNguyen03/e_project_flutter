@@ -1,4 +1,5 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:fashion_ecommerce_app/screens/login/toast.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 
@@ -15,52 +16,56 @@ class Cart extends StatefulWidget {
   @override
   State<Cart> createState() => _CartState();
 }
-//CodeWithFlexz on Instagram
-
-//AmirBayat0 on Github
-//Programming with Flexz on Youtube
 
 class _CartState extends State<Cart> {
-  /// Calculate the Total Price
+  /// phi' ship
+  double calculateShipping() {
+    double shipping = 0.0;
+    if (itemsOnCart.isEmpty) {
+      shipping = 0.0;
+      return shipping;
+    } else if (itemsOnCart.length <= 3) {
+      shipping = 25;
+      return shipping;
+    } else {
+      shipping = 50;
+      return shipping;
+    }
+  }
+
+  /// tinh tong
   double calculateTotalPrice() {
     double total = 0.0;
     if (itemsOnCart.isEmpty) {
       total = 0;
     } else {
       for (BaseModel data in itemsOnCart) {
-        total = total + data.price * data.value;
+        total = total +
+            data.price * data.value +
+            calculateShipping() -
+            calculateSaleTotalPrice();
       }
     }
     return total;
   }
 
-  /// Calculate Shipping
-  double calculateShipping() {
-    double shipping = 0.0;
+  /// giam gia
+  int calculateSaleTotalPrice() {
+    int saleTotal = 0;
     if (itemsOnCart.isEmpty) {
-      shipping = 0.0;
-      return shipping;
-    } else if (itemsOnCart.length <= 4) {
-      shipping = 25.99;
-      return shipping;
+      saleTotal = 0;
     } else {
-      shipping = 88.99;
-      return shipping;
-    }
-  }
-
-  /// Calculate the Sub Total Price
-  int calculateSubTotalPrice() {
-    int subTotal = 0;
-    if (itemsOnCart.isEmpty) {
-      subTotal = 0;
-    } else {
-      for (BaseModel data in itemsOnCart) {
-        subTotal = subTotal + data.price.round();
-        subTotal = subTotal - 160;
+      for (int i = 0; i < itemsOnCart.length; i++) {
+        if (itemsOnCart.length > 2 && itemsOnCart.length <= 4) {
+          saleTotal = 20;
+        } else if (itemsOnCart.length > 4) {
+          saleTotal = 50;
+        }
       }
     }
-    return subTotal < 0 ? 0 : subTotal;
+
+    // Đảm bảo giá trị trung bình không dưới 0
+    return saleTotal;
   }
 
   /// delete function for cart
@@ -319,13 +324,11 @@ class _CartState extends State<Cart> {
                         );
                       }),
             ),
-
-            /// Bottom Card
             Positioned(
               bottom: 0,
               child: Container(
                 width: size.width,
-                height: size.height * 0.38,
+                height: size.height * 0.34,
                 color: Colors.white,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
@@ -350,13 +353,13 @@ class _CartState extends State<Cart> {
                         ),
                       ),
                       SizedBox(
-                        height: size.height * 0.01,
+                        height: size.height * 0.001,
                       ),
                       FadeInUp(
                         delay: const Duration(milliseconds: 400),
                         child: ReuseableRowForCart(
-                          price: calculateSubTotalPrice().toDouble(),
-                          text: 'Sub Total',
+                          price: calculateSaleTotalPrice().toDouble(),
+                          text: 'Sale Total',
                         ),
                       ),
                       FadeInUp(
@@ -367,7 +370,7 @@ class _CartState extends State<Cart> {
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.symmetric(vertical: 10.0),
+                        padding: EdgeInsets.symmetric(vertical: 5.0),
                         child: Divider(),
                       ),
                       FadeInUp(
@@ -380,15 +383,17 @@ class _CartState extends State<Cart> {
                       FadeInUp(
                         delay: const Duration(milliseconds: 550),
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 15.0),
+                          padding: const EdgeInsets.symmetric(vertical: 10.0),
                           child: ReuseableButton(
-                              text: "Checkout",
-                              onTap: () {
-                                Navigator.pushReplacement(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => const Cart()));
-                              }),
+                            text: "Checkout",
+                            onTap: () {
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const Cart()));
+                              showToast(message: "Bạn đã đặt hàng thành công");
+                            },
+                          ),
                         ),
                       )
                     ],
