@@ -1,4 +1,6 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:fashion_ecommerce_app/data/app_data.dart';
+import 'package:fashion_ecommerce_app/screens/addProduct.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:video_player/video_player.dart';
@@ -101,8 +103,37 @@ class _MyShopState extends State<MyShop> {
                               )
                             ],
                           ),
-                          const ButtonPrimary(
-                            content: 'ADD PRODUCT',
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => AddProductPage(),
+                                ),
+                              );
+                            },
+                            child: RawMaterialButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => AddProductPage(),
+                                  ),
+                                );
+                              },
+                              child: Text(
+                                'ADD PRODUCT',
+                                style: TextStyle(
+                                  color: Colors.white, // Text color
+                                  fontSize: 12.0, // Text size
+                                ),
+                              ),
+                              fillColor: Colors.purple, // Background color
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(
+                                    8.0), // Adjust the border radius as needed
+                              ),
+                            ),
                           )
                         ],
                       ),

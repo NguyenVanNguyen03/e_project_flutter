@@ -21,6 +21,7 @@ Future main() async {
   } else {
     await Firebase.initializeApp();
   }
+
   runApp(
     MaterialApp(
       theme: ThemeData(

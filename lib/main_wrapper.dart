@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:bottom_bar_matu/bottom_bar/bottom_bar_bubble.dart';
 import 'package:bottom_bar_matu/bottom_bar_item.dart';
+import 'package:fashion_ecommerce_app/screens/addProduct.dart';
 import 'package:fashion_ecommerce_app/screens/cart.dart';
 import 'package:fashion_ecommerce_app/screens/home.dart';
 import 'package:fashion_ecommerce_app/screens/myShop.dart';

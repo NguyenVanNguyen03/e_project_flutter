@@ -46,7 +46,6 @@ class _HomeState extends State<Home> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              /// Top Text
               FadeInUp(
                 delay: const Duration(milliseconds: 300),
                 child: Padding(
@@ -91,7 +90,6 @@ class _HomeState extends State<Home> {
                 ),
               ),
 
-              /// Categories
               FadeInUp(
                 delay: const Duration(milliseconds: 450),
                 child: Container(

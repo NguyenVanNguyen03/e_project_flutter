@@ -64,11 +64,10 @@ class _CartState extends State<Cart> {
       }
     }
 
-    // Đảm bảo giá trị trung bình không dưới 0
     return saleTotal;
   }
 
-  /// delete function for cart
+  /// delete
   void onDelete(BaseModel data) {
     setState(() {
       if (itemsOnCart.length == 1) {
@@ -96,7 +95,7 @@ class _CartState extends State<Cart> {
               height: size.height * 0.6,
               child: itemsOnCart.isEmpty
 
-                  /// List is Empty:
+                  /// giỏ hàng trống
                   ? Column(
                       children: [
                         SizedBox(
@@ -139,7 +138,7 @@ class _CartState extends State<Cart> {
                       ],
                     )
 
-                  /// List is Not Empty:
+                  /// giỏ hàng không trống
                   : ListView.builder(
                       physics: const BouncingScrollPhysics(),
                       itemCount: itemsOnCart.length,
